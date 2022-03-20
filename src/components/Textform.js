@@ -10,10 +10,15 @@ export default function Textform(props) {
     setText(updatedText);
   }
 
-  const lowclick=()=>{
+  const lowClick=()=>{
     console.log("lowercase button clicked");
     let updatedText= text.toLowerCase();
     setText(updatedText);
+  }
+
+  const clearClick=()=>{
+    console.log("lowercase button clicked");
+    setText("");
   }
 
   const change=(event)=>{
@@ -30,7 +35,8 @@ export default function Textform(props) {
         <textarea className="form-control " value= {text} onChange={change} id="exampleFormControlTextarea1" rows="9"></textarea>
 
         <button type="button" className="btn btn-primary mx-2 btttt" onClick={upClick} >Uppercase</button>
-        <button type="button" className="btn btn-primary mx-2 btttt" onClick={lowclick} >Lowercase</button>
+        <button type="button" className="btn btn-primary mx-2 btttt" onClick={lowClick} >Lowercase</button>
+        <button type="button" className="btn btn-primary mx-2 btttt" onClick={clearClick} >Clear Text</button>
 
     </div>
 
