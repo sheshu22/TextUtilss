@@ -5,11 +5,14 @@ export default function Textform(props) {
   const[text,setText]=useState("first hook");
 
   const upClick= ()=>{
+    console.log("uppercase button clicked");
     let updatedText= text.toUpperCase();
     setText(updatedText);
   }
 
   const change=(event)=>{
+
+    console.log("onChange function clicked");
     setText(event.target.value);
   }
 
